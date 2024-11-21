@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.product {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 20px auto;
+    user-select: none;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: tranform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

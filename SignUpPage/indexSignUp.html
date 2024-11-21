@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../SignInPage/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login">
+            <h1>Đăng ký</h1>
+            <form action="" id="registerForm">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                <label for="username">Tên người dùng</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên người dùng" required>
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                <button type="submit">Đăng ký</button>
+                <p class="signup-link">Đã có tài khoản? <a href="../SignInPage/indexSignIn.html">Đăng nhập ngay</a></p>
+            </form>
+            <div class="message" id="successMessage" style="display: none;">Đăng ký thành công! Bạn sẽ được chuyển đến trang đăng nhập.</div>
+            <script>
+                // Hàm xử lý khi form đăng ký được gửi
+                document.getElementById("registerForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Ngừng hành động mặc định (không tải lại trang)
+        
+                    // Hiển thị thông báo thành công
+                    document.getElementById("successMessage").style.display = "block";
+        
+                    // Sau 2 giây, chuyển hướng đến trang đăng nhập
+                    setTimeout(function() {
+                        window.location.href = "../SignInPage/indexSignIn.html"; // Đổi đường dẫn này nếu cần thiết
+                    }, 2000);
+                });
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
