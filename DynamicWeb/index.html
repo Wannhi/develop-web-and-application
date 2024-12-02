@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic image Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .image-container {
+            overflow: hidden;
+        }
+        #dynamic-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            transition: tranform 0.3 ease;
+        }
+        #dynamic-image:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="dynamic-image" src="../DynamicWeb/assets/img/product_1.png" alt="Ảnh 1">
+    </div>
+    <script>
+        const img = document.getElementById('dynamic-image');
+        img.addEventListener('mouseover', function() {
+            img.src = '../DynamicWeb/assets/img/product_1.png';
+        });
+
+        img.addEventListener('mouseout', function() {
+            img.src = '../DynamicWeb/assets/img/product_2.jpg';
+        });
+    </script>
+</body>
+</html>
