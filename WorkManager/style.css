@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+h1 {
+    color: #333;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.inputWork {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 130px);
+    font-size: 16px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 110px;
+}
+button:hover {
+    background-color: #218838;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+li {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+li, button, body {
+    user-select: none;
+}
+
+li:hover {
+    background-color: #f8f9fa;
+}
+li.Completed {
+    text-decoration: line-through;
+    color: gray;
+    background-color: #e9ecef;
+}
+.delete-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 5px 20px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%; /* Ô nhập liệu chiếm toàn bộ chiều rộng */
+        margin-bottom: 10px; /* Tạo khoảng cách với nút */
+    }
+
+    button {
+        width: 100%; /* Nút bấm chiếm toàn bộ chiều rộng */
+        margin: 0;
+    }
+
+    ul {
+        margin-top: 10px; /* Tăng khoảng cách với các thành phần khác */
+    }
+
+    li {
+        flex-direction: column; /* Công việc hiển thị theo cột */
+        align-items: flex-start; /* Canh trái nội dung */
+    }
+
+    .delete-btn {
+        width: 20%; /* Nút xóa chiếm toàn bộ chiều rộng */
+    }
+}
