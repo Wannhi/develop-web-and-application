@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+    user-select: none;
+}
+h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 20px);
+    max-width: 300px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color: #218838;
+}
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+li {
+    padding: 10px;
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+#totalPrice {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    input[type="text"], input[type="number"] {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    button {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .delete-btn {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
