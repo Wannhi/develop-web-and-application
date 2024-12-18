@@ -43,6 +43,35 @@ body {
     cursor: pointer;
 }
 
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .game-container {
+        width: 90%; /* Chiếm 90% chiều rộng màn hình đối với thiết bị nhỏ */
+        height: 50vh; /* Chiếm 50% chiều cao màn hình */
+    }
+
+    .score {
+        font-size: 16px; /* Giảm kích thước font của điểm số */
+    }
+
+    .target {
+        width: 40px;
+        height: 40px; /* Giảm kích thước mục tiêu trên màn hình nhỏ */
+    }
+
+    #startBtn {
+        font-size: 14px; /* Giảm kích thước font nút bắt đầu */
+        padding: 8px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -50,4 +79,8 @@ body {
     to {
         opacity: 0;
     }
+}
+
+
+.container {
 }
